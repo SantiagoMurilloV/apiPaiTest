@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const sensorSchema = new mongoose.Schema({
   actualDate: String,
+  ID_plant: Number,
   mH: Number, 
   Pho_7in1: Number,
   Pot_7in1: Number,

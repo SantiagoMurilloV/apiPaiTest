@@ -2,10 +2,10 @@ const Sensor = require('../models/SensorModel');
 
 exports.createSensorData = async (req, res) => {
   try {
-      const { mH, Pho_7in1, Pot_7in1, Nit_7in1, Moi_7in1, Tem_7in1, Ph_7in1, Con_7in1 } = req.body;
+      const { ID_plant,mH, Pho_7in1, Pot_7in1, Nit_7in1, Moi_7in1, Tem_7in1, Ph_7in1, Con_7in1 } = req.body;
       const date = new Date().toLocaleString("es-CO", {timeZone: "America/Bogota"});
       const sensorData = new Sensor({
-          mH, Pho_7in1, Pot_7in1, Nit_7in1, Moi_7in1, Tem_7in1, Ph_7in1, Con_7in1,
+        ID_plant, mH, Pho_7in1, Pot_7in1, Nit_7in1, Moi_7in1, Tem_7in1, Ph_7in1, Con_7in1,
           actualDate: date
       });
 
